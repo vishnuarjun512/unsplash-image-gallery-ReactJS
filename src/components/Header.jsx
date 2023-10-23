@@ -15,11 +15,11 @@ const Header = ({ setImg }) => {
 
   return (
     <header className={isDarkMode ? "dark-mode h-full" : "light-mode w-full"}>
-      <div className="grid grid-cols-3 sm:grid-cols-5 p-2 mx-3 sm:mx-5">
-        <h1 className="text-xl sm:text-3xl font-extrabold cursor-pointer col-span-2 sm:col-span-1 flex justify-start sm:justify-center items-center">
+      <div className="grid grid-cols-3 md:grid-cols-5 p-2 mx-3 md:mx-5">
+        <h1 className="text-xl md:text-3xl font-extrabold cursor-pointer col-span-2 md:col-span-1 flex justify-start md:justify-center items-center">
           Image Gallery
         </h1>
-        <div className="hidden sm:flex items-center justify-around col-span-4">
+        <div className="hidden md:flex items-center justify-around col-span-4">
           <form
             className={`${
               isDarkMode ? "bg-[#535151]" : " bg-slate-100"
@@ -43,7 +43,7 @@ const Header = ({ setImg }) => {
             toggleDarkMode={toggleDarkMode}
           />
         </div>
-        <div className="sm:hidden grid-cols-1 flex items-center justify-end gap-2">
+        <div className="md:hidden grid-cols-1 flex items-center justify-end gap-2">
           <FaSearch className="text-slate-600 cursor-pointer hover:scale-[1.3] ease-in duration-100" />
           <AiOutlineMenu onClick={toggleDropdown} />
           <div
