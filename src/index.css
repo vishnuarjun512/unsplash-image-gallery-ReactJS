@@ -36,9 +36,9 @@
 
 @media (max-width: 480px) {
     .gallery {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1; 
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2; 
         -webkit-column-width: 100%;
         -moz-column-width: 100%;
         column-width: 100%; 
@@ -96,4 +96,25 @@ transform: translateX(0);
 .slider-button.dark .slider {
 transform: translateX(35px);
 }
+
+
+.dropdown {
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+    transition: max-height 1s ease-in-out, background-color 1s ease-in-out, color 1s ease-in-out, transform 1s ease-in-out;
+    background-color: transparent;
+    color: transparent;
+    transform: translateY(-7px);
+    max-height: 0;
+    z-index: 10;
+}
+
+.dropdown.open {
+    background-color: #4b4b4b;
+    color: white;
+    transform: translateY(0);
+    max-height: 100%; /* Adjust the height as needed */
+}
+
   

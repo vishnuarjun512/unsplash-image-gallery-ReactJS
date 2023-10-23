@@ -63,18 +63,18 @@ const MyComponent = ({ res, setImg }) => {
                 onClick={() => openPopup(val)}
               />
             </div>
-            <div className="flex items-center justify-between mx-3 p-1">
+            <div className="flex items-center justify-between mx-1 sm:mx-3 p-1">
               <div className="flex justify-center items-center pb-1 gap-2">
                 <img
-                  className="w-10 h-10 rounded-full"
+                  className="w-6 sm:w-10 h-6 sm:h-10 rounded-full"
                   src={val.user.profile_image.small}
                   alt="Profile Image"
                 />
                 <div className="flex flex-col items-start">
-                  <p className="text-md font-bold">
+                  <p className="text-[10px] sm:text-lg font-bold">
                     {val.user.first_name + " " + val.user.last_name}
                   </p>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-[8px] sm:text-sm text-gray-700">
                     @
                     {val.user.instagram_username === null
                       ? "Unknown"
@@ -83,8 +83,8 @@ const MyComponent = ({ res, setImg }) => {
                 </div>
               </div>
               <div className="flex items-center gap-[0.10rem]">
-                <AiFillLike />
-                <p>{val.likes}</p>
+                <AiFillLike className="sm:w-5 sm:h-5 w-3 h-3" />
+                <p className="text-[10px] sm:text-md">{val.likes}</p>
               </div>
             </div>
           </div>
